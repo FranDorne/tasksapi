@@ -7,7 +7,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot(),
     TasksModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/nestjs'),
+    MongooseModule.forRoot(process.env.MONGODB_URL),
   ],
   controllers: [],
   providers: [],
